@@ -1,0 +1,6 @@
+{
+  "name": "ClipForge AI",
+  "description": "AI-powered tool that transforms long videos into viral, high-converting short clips with auto transcription, smart reframing, and timeline editing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

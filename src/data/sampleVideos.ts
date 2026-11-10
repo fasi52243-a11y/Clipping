@@ -1,0 +1,272 @@
+import { ProjectItem, ClipItem } from '../types';
+
+export interface SampleVideoDefinition {
+  id: string;
+  title: string;
+  category: string;
+  duration: number; // in seconds
+  description: string;
+  speaker: string;
+  aspectRatio: '16:9';
+  canvasTheme: 'interview' | 'keynote' | 'podcast';
+  transcript: string;
+  preconfiguredClips: ClipItem[];
+}
+
+export const SAMPLE_VIDEOS: SampleVideoDefinition[] = [
+  {
+    id: 'sample-saas-scaling',
+    title: 'The Secret to Scaling B2B SaaS from $1M to $10M ARR',
+    category: 'Interview & Business',
+    duration: 180,
+    speaker: 'Elena Vance & Marcus Cole',
+    description: 'An executive breakdown of pricing leverage, high-retention onboarding, and the brutal transition from founder-led sales.',
+    aspectRatio: '16:9',
+    canvasTheme: 'interview',
+    transcript: `[00:00 - Elena]: Welcome back everyone. Today we are talking with Marcus Cole about scaling past that notorious one-million dollar ARR plateau.
+[00:08 - Marcus]: Thanks Elena. Look, the biggest mistake founders make after hitting their first million is thinking the exact same playbook will get them to ten million. It never does.
+[00:19 - Elena]: Why is that? What actually breaks first?
+[00:23 - Marcus]: What breaks first is founder-led sales. When the founder is in every deal, you are closing on charisma and vision. But your first five account executives don't have that reality distortion field. You need a repeatable process, clear qualification criteria, and a pricing model that scales with customer value, not arbitrary user seats.
+[00:46 - Elena]: Let's talk about pricing. Most founders undercharge dramatically.
+[00:51 - Marcus]: Exactly! If your customers aren't flinching just a tiny bit when you send the proposal, you are leaving seventy percent of your margin on the table. In SaaS, price is an indicator of perceived ROI.
+[01:08 - Elena]: That is such a crucial mindset shift. What about retention?
+[01:14 - Marcus]: Retention is the silent killer. If your net revenue retention is below 110%, you are running on a leaky treadmill. You can pour all the venture capital you want into top of funnel, but you will eventually exhaust your market. Fix onboarding in the first fourteen days, and your lifetime value triples.
+[01:38 - Elena]: Incredible insights. Where should listeners start this week?
+[01:44 - Marcus]: Call your top ten churned customers. Don't pitch them. Just listen for 30 minutes about where their expectations parted from reality. That conversation is worth more than a hundred hours of strategy meetings.`,
+    preconfiguredClips: [
+      {
+        id: 'clip-saas-1',
+        title: 'Founder-Led Sales is a Trap After $1M ARR',
+        start: 8.0,
+        end: 45.0,
+        duration: 37.0,
+        mainTopic: 'Founder-Led Sales vs Process',
+        hook: 'The biggest mistake founders make after hitting $1M ARR is thinking the same playbook gets them to $10M.',
+        category: 'Business & SaaS',
+        aiScore: 94,
+        scoreExplanation: 'Powerful counter-intuitive hook within the first 4 seconds, followed by concrete diagnostic advice regarding sales reps and repeatability.',
+        recommendedPlatform: 'TikTok',
+        aspectRatio: '9:16',
+        cropOffsetX: 0,
+        smartReframingAuto: true,
+        captionPreset: 'bold-impact',
+        volume: 1,
+        watermarkEnabled: true,
+        watermarkPosition: 'top-right',
+        brolls: [],
+        subtitles: [
+          { id: 's1', start: 8.0, end: 12.0, text: 'The biggest mistake founders make after hitting $1M' },
+          { id: 's2', start: 12.1, end: 17.5, text: 'is thinking the same playbook will get them to ten million.' },
+          { id: 's3', start: 17.6, end: 21.0, text: 'It never does.' },
+          { id: 's4', start: 23.0, end: 28.5, text: 'What breaks first is founder-led sales.' },
+          { id: 's5', start: 28.6, end: 34.0, text: 'You are closing deals on personal charisma and vision.' },
+          { id: 's6', start: 34.1, end: 40.0, text: 'Your new account executives need a repeatable system.' },
+          { id: 's7', start: 40.1, end: 45.0, text: 'And a pricing model that scales with customer value!' },
+        ],
+      },
+      {
+        id: 'clip-saas-2',
+        title: 'If Customers Don’t Flinch, You Are Undercharging',
+        start: 46.0,
+        end: 72.0,
+        duration: 26.0,
+        mainTopic: 'Pricing Psychology in SaaS',
+        hook: 'If your customers aren’t flinching a tiny bit at your proposal, you’re leaving 70% of margin on the table.',
+        category: 'Sales Strategy',
+        aiScore: 96,
+        scoreExplanation: 'Extremely high engagement hook with immediate actionable pricing psychology rules.',
+        recommendedPlatform: 'YouTube Shorts',
+        aspectRatio: '9:16',
+        cropOffsetX: 0,
+        smartReframingAuto: true,
+        captionPreset: 'creator-glow',
+        volume: 1,
+        watermarkEnabled: true,
+        watermarkPosition: 'top-right',
+        brolls: [],
+        subtitles: [
+          { id: 's8', start: 46.0, end: 50.5, text: 'Most founders undercharge dramatically for their software.' },
+          { id: 's9', start: 51.0, end: 56.5, text: 'If customers aren’t flinching when you send the proposal,' },
+          { id: 's10', start: 56.6, end: 61.5, text: 'you are leaving seventy percent of margin on the table!' },
+          { id: 's11', start: 62.0, end: 67.5, text: 'In modern SaaS, price is an indicator of perceived ROI.' },
+          { id: 's12', start: 67.6, end: 72.0, text: 'Never compete on being the cheapest solution.' },
+        ],
+      },
+      {
+        id: 'clip-saas-3',
+        title: 'The Silent Killer: Why 110% NRR is Non-Negotiable',
+        start: 112.0,
+        end: 142.0,
+        duration: 30.0,
+        mainTopic: 'Customer Retention & NRR',
+        hook: 'Retention is the silent killer running on a leaky treadmill.',
+        category: 'Growth Metrics',
+        aiScore: 89,
+        scoreExplanation: 'Strong urgency metaphor paired with clear 14-day onboarding timeline guidance.',
+        recommendedPlatform: 'Instagram Reels',
+        aspectRatio: '9:16',
+        cropOffsetX: 0,
+        smartReframingAuto: true,
+        captionPreset: 'podcast-studio',
+        volume: 1,
+        watermarkEnabled: true,
+        watermarkPosition: 'top-right',
+        brolls: [],
+        subtitles: [
+          { id: 's13', start: 112.0, end: 117.0, text: 'Retention is the silent killer of tech startups.' },
+          { id: 's14', start: 117.1, end: 122.5, text: 'If net revenue retention is below 110 percent,' },
+          { id: 's15', start: 122.6, end: 127.5, text: 'you are running on an exhausting leaky treadmill.' },
+          { id: 's16', start: 128.0, end: 134.0, text: 'Fix your user onboarding in the first fourteen days,' },
+          { id: 's17', start: 134.1, end: 142.0, text: 'and your customer lifetime value triples automatically.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'sample-ai-keynote',
+    title: 'AI Systems Architecture & Engineering in 2026',
+    category: 'Keynote & Tech',
+    duration: 210,
+    speaker: 'Dr. Aris Thorne',
+    description: 'Why agentic multi-turn pipelines and low-latency models are replacing static monolithic APIs.',
+    aspectRatio: '16:9',
+    canvasTheme: 'keynote',
+    transcript: `[00:00 - Aris]: Good morning everyone. In 2026, the question is no longer whether AI can write code or generate answers. The real question is: can your system orchestrate complex real-time workflows with zero latency and complete auditability?
+[00:18 - Aris]: For the past three years, teams built brittle wrappers around single prompt calls. A user types a question, you hit a single endpoint, you wait four seconds, and you hope for the best.
+[00:32 - Aris]: That paradigm is completely dead. Modern intelligent systems are multi-agent feedback loops. One model plans, another executes deterministic tools, and a third continuously verifies constraints.
+[00:48 - Aris]: The breakthrough isn't bigger model weights. The breakthrough is tool coordination. When you give a reasoning engine direct access to sandboxed compilers, browsers, and real-time databases, the problem space expands exponentially.
+[01:07 - Aris]: If your software architecture still treats AI as a text chatbot box in the bottom right corner, you are missing 99% of the revolution. Software itself is being refactored into active, dynamic agents.`,
+    preconfiguredClips: [
+      {
+        id: 'clip-ai-1',
+        title: 'Single Prompt Wrappers Are Officially Dead',
+        start: 18.0,
+        end: 47.0,
+        duration: 29.0,
+        mainTopic: 'The Death of AI Wrappers',
+        hook: 'If your entire product is just a single prompt call, your architecture is already obsolete.',
+        category: 'Tech & AI',
+        aiScore: 97,
+        scoreExplanation: 'Extremely high controversy rating with high engineer relatability, opening directly with a paradigm shift announcement.',
+        recommendedPlatform: 'TikTok',
+        aspectRatio: '9:16',
+        cropOffsetX: 0,
+        smartReframingAuto: true,
+        captionPreset: 'cyber-neon',
+        volume: 1,
+        watermarkEnabled: true,
+        watermarkPosition: 'top-right',
+        brolls: [],
+        subtitles: [
+          { id: 's18', start: 18.0, end: 23.5, text: 'For the past three years, teams built brittle wrappers' },
+          { id: 's19', start: 23.6, end: 28.5, text: 'around single prompt calls and prayed it worked.' },
+          { id: 's20', start: 29.0, end: 32.5, text: 'That paradigm is completely dead.' },
+          { id: 's21', start: 33.0, end: 38.0, text: 'Modern intelligent systems are multi-agent feedback loops.' },
+          { id: 's22', start: 38.1, end: 43.5, text: 'One model plans, another executes deterministic tools,' },
+          { id: 's23', start: 43.6, end: 47.0, text: 'and a third continuously audits constraints.' },
+        ],
+      },
+      {
+        id: 'clip-ai-2',
+        title: 'Stop Building Chatbots in the Bottom Corner',
+        start: 67.0,
+        end: 95.0,
+        duration: 28.0,
+        mainTopic: 'Future of Software Interfaces',
+        hook: 'Treating AI as a little chatbot box in the corner is missing 99% of the revolution.',
+        category: 'UI/UX Design',
+        aiScore: 92,
+        scoreExplanation: 'Hits UI/UX designers and engineers right between the eyes with sharp visual imagery and clear thesis.',
+        recommendedPlatform: 'LinkedIn',
+        aspectRatio: '9:16',
+        cropOffsetX: 0,
+        smartReframingAuto: true,
+        captionPreset: 'bold-impact',
+        volume: 1,
+        watermarkEnabled: true,
+        watermarkPosition: 'top-right',
+        brolls: [],
+        subtitles: [
+          { id: 's24', start: 67.0, end: 73.0, text: 'If your software architecture still treats AI' },
+          { id: 's25', start: 73.1, end: 78.5, text: 'as a text chatbot box in the bottom right corner,' },
+          { id: 's26', start: 78.6, end: 84.0, text: 'you are missing ninety-nine percent of the revolution.' },
+          { id: 's27', start: 84.1, end: 90.0, text: 'Software itself is being refactored into active agents.' },
+          { id: 's28', start: 90.1, end: 95.0, text: 'Interfaces will mold dynamically to what you need.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'sample-creator-podcast',
+    title: '3 Uncomfortable Truths About Growing on Social Media',
+    category: 'Solo Creator',
+    duration: 150,
+    speaker: 'Maya Lin',
+    description: 'Raw, unvarnished advice on algorithmic distribution, attention economics, and why consistency without iteration is futile.',
+    aspectRatio: '16:9',
+    canvasTheme: 'podcast',
+    transcript: `[00:00 - Maya]: Stop posting every single day hoping the algorithm magically discovers you. Consistency without iteration is just compounding bad habits.
+[00:12 - Maya]: Here is truth number one: Nobody cares about your production value if your first three seconds are boring. You can shoot on an ARRI Alexa with cinema lighting, but if your hook doesn't create curiosity or emotion, they swipe in 1.2 seconds.
+[00:29 - Maya]: Truth number two: Quantity only beats quality when you actively analyze why the previous five videos bombed. If you post 100 videos with the exact same pacing error, you didn't get 100 days of experience, you repeated Day 1 one hundred times.
+[00:46 - Maya]: And truth number three: Repurposing long-form content is the only way creators survive burn-out. If you spend 20 hours filming a podcast, you must extract at least eight vertical clips, three carousel posts, and a newsletter from that single session.`,
+    preconfiguredClips: [
+      {
+        id: 'clip-cr-1',
+        title: 'Consistency Without Iteration Is Compounding Bad Habits',
+        start: 0.0,
+        end: 28.0,
+        duration: 28.0,
+        mainTopic: 'The Consistency Myth',
+        hook: 'Stop posting every day hoping the algorithm magically discovers you.',
+        category: 'Creator Growth',
+        aiScore: 98,
+        scoreExplanation: 'Instant direct challenge hook at 0.0s, high retention cadence, speaks directly to frustrated creators.',
+        recommendedPlatform: 'TikTok',
+        aspectRatio: '9:16',
+        cropOffsetX: 0,
+        smartReframingAuto: true,
+        captionPreset: 'bold-impact',
+        volume: 1,
+        watermarkEnabled: true,
+        watermarkPosition: 'top-right',
+        brolls: [],
+        subtitles: [
+          { id: 's29', start: 0.0, end: 4.5, text: 'Stop posting every single day' },
+          { id: 's30', start: 4.6, end: 8.5, text: 'hoping the algorithm magically discovers you.' },
+          { id: 's31', start: 8.6, end: 14.0, text: 'Consistency without iteration is just compounding bad habits!' },
+          { id: 's32', start: 14.5, end: 19.5, text: 'Nobody cares about cinema lighting' },
+          { id: 's33', start: 19.6, end: 24.0, text: 'if your first three seconds are completely boring.' },
+          { id: 's34', start: 24.1, end: 28.0, text: 'They swipe in one point two seconds!' },
+        ],
+      },
+      {
+        id: 'clip-cr-2',
+        title: 'How to Repurpose 1 Podcast into 8 Viral Clips',
+        start: 46.0,
+        end: 72.0,
+        duration: 26.0,
+        mainTopic: 'Content Repurposing',
+        hook: 'Repurposing long-form content is the ONLY way creators survive burn-out.',
+        category: 'Productivity',
+        aiScore: 95,
+        scoreExplanation: 'Clear operational framework for burnout prevention and multi-platform reach.',
+        recommendedPlatform: 'YouTube Shorts',
+        aspectRatio: '9:16',
+        cropOffsetX: 0,
+        smartReframingAuto: true,
+        captionPreset: 'tiktok-bouncy',
+        volume: 1,
+        watermarkEnabled: true,
+        watermarkPosition: 'top-right',
+        brolls: [],
+        subtitles: [
+          { id: 's35', start: 46.0, end: 51.5, text: 'Repurposing long-form content is the only way creators survive.' },
+          { id: 's36', start: 52.0, end: 57.0, text: 'If you spend twenty hours recording a podcast,' },
+          { id: 's37', start: 57.1, end: 63.0, text: 'you must extract at least eight vertical short clips,' },
+          { id: 's38', start: 63.1, end: 68.0, text: 'three carousel posts, and a newsletter' },
+          { id: 's39', start: 68.1, end: 72.0, text: 'from that single recording session!' },
+        ],
+      },
+    ],
+  },
+];
